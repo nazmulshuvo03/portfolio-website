@@ -2,20 +2,51 @@
 <html lang="en">
     <head>
         {% load static %}
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            {% block title %}My Portfolio{% endblock %}
-        </title>
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}" defer></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Portfolio</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">My Portfolio</a>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero">Hero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#certifications">Certifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <div class="container mt-4">
+        <main>
             {% block content %}{% endblock %}
-        </div>
-        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        </main>
+        <footer class="bg-dark text-white py-4">
+            {% include 'snippets/footer.html' %}
+        </footer>
     </body>
 </html>

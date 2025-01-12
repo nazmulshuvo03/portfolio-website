@@ -1,0 +1,19 @@
+<section id="education" class="py-5">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="row">
+      {% for edu in education %}
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ edu.degree }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              {{ edu.institution }} ({{ edu.year }})
+            </h6>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

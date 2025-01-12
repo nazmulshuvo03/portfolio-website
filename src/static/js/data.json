@@ -1,0 +1,19 @@
+{
+    "experience": [
+        { "title": "Senior Developer", "company": "Tech Corp", "duration": "2018 - Present", "description": "Worked on full-stack development." },
+        { "title": "Junior Developer", "company": "Code Lab", "duration": "2016 - 2018", "description": "Built responsive web applications." }
+    ],
+    "projects": [
+        { "name": "Project A", "description": "E-commerce platform.", "link": "https://example.com" },
+        { "name": "Project B", "description": "AI chatbot.", "link": "https://example.com" }
+    ],
+    "education": [
+        { "degree": "B.Sc in Computer Science", "institution": "University X", "year": "2016" },
+        { "degree": "M.Sc in Data Science", "institution": "University Y", "year": "2018" }
+    ],
+    "certifications": [
+        { "name": "AWS Certified Developer", "year": "2020" },
+        { "name": "Full Stack Developer", "year": "2019" }
+    ]
+}
+

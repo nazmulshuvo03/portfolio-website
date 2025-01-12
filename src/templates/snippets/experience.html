@@ -1,0 +1,20 @@
+<section id="experience" class="py-5">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="row">
+      {% for exp in experience %}
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ exp.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              {{ exp.company }} ({{ exp.duration }})
+            </h6>
+            <p class="card-text">{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
