@@ -1,19 +1,67 @@
 {
-    "experience": [
-        { "title": "Senior Developer", "company": "Tech Corp", "duration": "2018 - Present", "description": "Worked on full-stack development." },
-        { "title": "Junior Developer", "company": "Code Lab", "duration": "2016 - 2018", "description": "Built responsive web applications." }
-    ],
-    "projects": [
-        { "name": "Project A", "description": "E-commerce platform.", "link": "https://example.com" },
-        { "name": "Project B", "description": "AI chatbot.", "link": "https://example.com" }
-    ],
-    "education": [
-        { "degree": "B.Sc in Computer Science", "institution": "University X", "year": "2016" },
-        { "degree": "M.Sc in Data Science", "institution": "University Y", "year": "2018" }
-    ],
-    "certifications": [
-        { "name": "AWS Certified Developer", "year": "2020" },
-        { "name": "Full Stack Developer", "year": "2019" }
-    ]
+  "experience": [
+    {
+      "title": "Full Stack Developer",
+      "company": "Upsurge",
+      "duration": "Apr 20222 - Oct 2024",
+      "description": "Worked on NextJs frontend, Nodejs Backend and React Native Mobile Application"
+    },
+    {
+      "title": "Frontend Development Engineer II",
+      "company": "EnrichAI",
+      "duration": "Oct 2020 - Apr 2022",
+      "description": "Built IoT Applications using React and Cumulocity platform"
+    },
+    {
+      "title": "React Developer",
+      "company": "Pvot",
+      "duration": "Apr 2019 - Sep 2020",
+      "description": "Developed a FinTech PWS using React and Django"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Jaiganpati",
+      "description": "Spritual E-learning platform",
+      "contribution": "Built the site frontend from scratch upto initial producation stage",
+      "link": "https://jaiganpati.com"
+    },
+    {
+      "name": "Bitsimplify",
+      "description": "Online coding platform",
+      "contribution": "Worked on specific part of the online code editor",
+      "link": "https://www.bitsimplify.com"
+    },
+    {
+      "name": "Qstn",
+      "description": "DeFi and NFT application on NEAR protocol",
+      "contribution": "Worked on the Nextjs frontend landing pages",
+      "link": "https://qstn.us"
+    },
+    {
+      "name": "Candidace",
+      "description": "Job searching candidates networking platform",
+      "contribution": "Built the full website using Nextjs frontend, Nodejs backend and PostgreSQL database",
+      "link": "https://candidace.fyi"
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc in Mathematics",
+      "institution": "University of Barishal",
+      "year": "2018"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "IBM Full Stack Software Developer",
+      "provider": "IBM",
+      "url": "https://coursera.org/share/94818597af1ec4bbfa81d0b4d8644b13"
+    },
+    {
+      "name": "Machine Learning",
+      "provider": "Stanford University",
+      "url": "https://coursera.org/share/65b6f4f6d0dc53950960295fca0d79be"
+    }
+  ]
 }
-

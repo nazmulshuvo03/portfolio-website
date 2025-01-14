@@ -1,17 +1,21 @@
-<section id="certifications" class="py-5 bg-light">
-  <div class="container">
-    <h2>Certifications</h2>
-    <div class="row">
-      {% for cert in certifications %}
-      <div class="col-md-4">
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">{{ cert.name }}</h5>
-            <p class="card-text">{{ cert.year }}</p>
-          </div>
+<section id="certifications" class="py-5">
+    <div class="container">
+        <h2>Certifications</h2>
+        <div class="row">
+            {% for cert in certifications %}
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ cert.name }}</h5>
+                            <p class="card-text">{{ cert.provider }}</p>
+                            <a href="{{ cert.link }}"
+                               class="btn btn-secondary"
+                               target="_blank"
+                               rel="noopener noreferrer">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-      </div>
-      {% endfor %}
     </div>
-  </div>
 </section>
