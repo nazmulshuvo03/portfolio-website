@@ -1,6 +1,21 @@
 <section id="contact" class="py-5">
   <div class="container">
     <h2>Contact Me</h2>
-    <p>Contact form coming soon!</p>
-  </div>
+    <p class="mb-4">
+      Feel free to reach out to me directly using the form below:
+    </p>
+
+    {% if success %}
+    <div class="alert alert-success">
+      Your message has been sent successfully! Thank you for reaching out.
+    </div>
+    {% endif %}
+
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3">{{ form.name.label_tag }} {{ form.name }}</div>
+      <div class="mb-3">{{ form.email.label_tag }} {{ form.email }}</div>
+      <div class="mb-3">{{ form.message.label_tag }} {{ form.message }}</div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
 </section>

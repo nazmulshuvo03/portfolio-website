@@ -1,10 +1,14 @@
 import json
 from pathlib import Path
 
+from decouple import config
+from django.core.mail import send_mail
 from django.shortcuts import render
 
+from .forms import ContactForm
 
-def home(request):
+
+def load_data():
     # Path to the JSON file
     data_file = Path(__file__).resolve().parent.parent / "static/js/data.json"
 
@@ -16,4 +20,41 @@ def home(request):
         print(f"Error loading JSON data: {e}")
         data = {}
 
-    return render(request, "home.html", data)
+    return data
+
+
+def process_contact_form(request):
+    form = ContactForm()
+    success = False
+
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            message = form.cleaned_data["message"]
+
+            # Send email
+            send_mail(
+                subject=f"Message from {name}",
+                message=f"From: {email}\n\nMessage:\n{message}",
+                from_email=email,
+                recipient_list=[config("EMAIL_HOST_USER")],
+                fail_silently=False,
+            )
+            success = True
+
+    return {"form": form, "success": success}
+
+
+def home(request):
+    # Load data
+    data = load_data()
+
+    # Process contact form
+    contact_context = process_contact_form(request)
+
+    # Combine both contexts
+    context = {**data, **contact_context}
+
+    return render(request, "home.html", context)

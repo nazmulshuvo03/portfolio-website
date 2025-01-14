@@ -6,6 +6,6 @@
         {% include 'snippets/projects.html' %}
         {% include 'snippets/education.html' %}
         {% include 'snippets/certifications.html' %}
-        {% include 'snippets/contact.html' %}
+        {% include 'snippets/contact.html' with form=form success=success %}
     {% endblock %}
 </section>
