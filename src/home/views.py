@@ -2,8 +2,11 @@ import json
 from pathlib import Path
 
 from decouple import config
+from django.contrib import messages
 from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
 
 from .forms import ContactForm
 
@@ -43,6 +46,12 @@ def process_contact_form(request):
                 fail_silently=False,
             )
             success = True
+            messages.success(request, "Your message has been sent successfully!")
+        else:
+            messages.error(
+                request,
+                "There was an error with your submission. Please check your input.",
+            )
 
     return {"form": form, "success": success}
 
@@ -53,6 +62,10 @@ def home(request):
 
     # Process contact form
     contact_context = process_contact_form(request)
+
+    # If the form was successfully submitted, redirect to avoid form resubmission
+    if contact_context.get("success"):
+        return HttpResponseRedirect(reverse("home") + "#contact")
 
     # Combine both contexts
     context = {**data, **contact_context}
