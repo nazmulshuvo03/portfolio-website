@@ -1,11 +1,9 @@
-<section>
-    {% extends "base.html" %}
-    {% block content %}
-        {% include 'snippets/hero.html' %}
-        {% include 'snippets/experience.html' %}
-        {% include 'snippets/projects.html' %}
-        {% include 'snippets/education.html' %}
-        {% include 'snippets/certifications.html' %}
-        {% include 'snippets/contact.html' with form=form success=success %}
-    {% endblock %}
-</section>
+{% extends "base.html" %}
+{% block content %}
+    {% include 'snippets/hero.html' %}
+    {% include 'snippets/experience.html' %}
+    {% include 'snippets/projects.html' %}
+    {% include 'snippets/education.html' %}
+    {% include 'snippets/certifications.html' %}
+    {% include 'snippets/contact.html' with form=form success=success %}
+{% endblock %}
